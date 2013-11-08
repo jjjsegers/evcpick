@@ -1,0 +1,17 @@
+Package: evcpick
+Title: Estimators for Extreme-Value Copulas
+Description: The package provides functions for rank-based versions of three
+    estimators for the Pickands dependence function of a bivariate extreme
+    value copula: the Pickands estimator, the Caperaa-Fougeres-Genest
+    estimator, and the Buecher-Dette-Volgushev estimator.
+Version: 0.1
+Author: Axel Buecher <axel.buecher@ruhr-uni-bochum.de>, Johan Segers
+    <johan.segers@uclouvain.be>
+Maintainer: Johan Segers <johan.segers@uclouvain.be>
+Depends:
+    R (>= 3.0.1)
+License: GPL (>= 3)
+LazyData: true
+Collate:
+    'evcpick-package.r'
+    'pickands.r'
