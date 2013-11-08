@@ -88,7 +88,8 @@ empCop <- function(u, pdata) {
             as.integer(k),
             as.integer(d),
             as.integer(l.u),
-            result = double(l.u))$result
+            result = double(l.u),
+            PACKAGE = "evcpick")$result
   return(res)
 }
 
@@ -116,11 +117,11 @@ evcBDV <- function(t, x = NULL, pdata = pseudo(x), kappa = 0.5, gamma = 2/3, abc
     return(- (kappa+1) * y^kappa * log(Ctilde))
   }
   for (i in 1:l.t) {
-    A[i] <- integrate(f, lower = 0, upper = 1, t = t[i])$value
+    A[i] <- integrate(f, lower = 0, upper = 1, t = t[i], subdivisions = 500L)$value
   }
   if (abc) {
-    A0 <- integrate(f, lower = 0, upper = 1, t = 0)$value
-    A1 <- integrate(f, lower = 0, upper = 1, t = 1)$value
+    A0 <- integrate(f, lower = 0, upper = 1, t = 0, subdivisions = 500L)$value
+    A1 <- integrate(f, lower = 0, upper = 1, t = 1, subdivisions = 500L)$value
     A <- A - (1-t) * (A0 - 1) - t * (A1 - 1)
   }
   return(A)
