@@ -8,13 +8,13 @@ Installation
 
 To install the package in R, you must first install the `devtools` package:
 
-```R
+```
 install.package("devtools")
 ```
   
 Then, to install the `effcopgauss` package, simply do
 
-```R
+```
 library(devtools)
 install_github("evcpick", "jjjsegers")
 ```
